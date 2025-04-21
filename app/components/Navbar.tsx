@@ -33,8 +33,10 @@ export default function Navbar() {
             <Link href="/contact" className={linkBaseStyle}>
               <span className="text-md">CONTACTO</span>
             </Link>
+            <Link href="/proyectos/salon-de-eventos">
+              <span className="text-md">PROYECTOS</span>
+            </Link>
           </div>
-
           <button onClick={() => setMenuOpen(true)} className="md:hidden p-2">
             {/* <span className="text-black">+</span> */}
             <Icon
