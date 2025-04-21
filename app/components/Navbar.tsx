@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 import NameTitle from "./NameTitle";
-
+import { Icon } from "@iconify/react";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -37,11 +37,16 @@ export default function Navbar() {
           </div>
 
           <button onClick={() => setMenuOpen(true)} className="md:hidden p-2">
-            <span className="sr-only">Abrir menú</span>
+            {/* <span className="text-black">+</span> */}
+            <Icon
+              icon="gg:menu-left"
+              className="text-neutral-900 dark:text-white"
+              width="24"
+              height="24"
+            />
           </button>
         </div>
       </header>
-
       <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </>
   );

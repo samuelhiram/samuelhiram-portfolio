@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.btn {
+  @apply cursor-pointer flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold bg-neutral-100 dark:bg-neutral-700 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-600 shadow-sm transition-colors duration-300 hover:bg-neutral-200 dark:hover:bg-neutral-600 hover:text-black dark:hover:text-white hover:scale-[1.02] active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-orange-500;
+}
