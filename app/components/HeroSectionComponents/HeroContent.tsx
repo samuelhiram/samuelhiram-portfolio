@@ -46,7 +46,7 @@ export default function HeroContent() {
           </div>
         </>
       )}
-      <div className="w-full flex justify-start">
+      <div className="w-full flex justify-end">
         <button
           onClick={() => setShowMore(!showMore)}
           className="cursor-pointer text-sm font-medium text-orange-600 dark:text-orange-400 hover:underline"

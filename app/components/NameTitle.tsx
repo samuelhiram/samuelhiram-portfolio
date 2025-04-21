@@ -17,7 +17,7 @@ export default function NameTitle({
   showSubtitle = true,
 }: NameTitleProps) {
   return (
-    <div className="flex flex-col  w-full justify-start items-center">
+    <div className="flex  backdrop-blur-3xl flex-col  w-full justify-start items-center">
       <h1 className="flex flex-row flex-wrap items-baseline w-full overflow-hidden ">
         <span
           className={`font-bold tracking-tighter ${textSizeClasses} ${mainColor}`}
