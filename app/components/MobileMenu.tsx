@@ -23,7 +23,6 @@ export default function MobileMenu({ onClose, isOpen }: Props) {
 
   return (
     <div className="fixed inset-0 z-50 bg-white/90 dark:bg-neutral-950/90 backdrop-blur-xl text-neutral-900 dark:text-neutral-100 px-6 py-4 flex flex-col transition-all">
-      {/* Close */}
       <div className="flex justify-end">
         <button
           onClick={onClose}
@@ -34,7 +33,6 @@ export default function MobileMenu({ onClose, isOpen }: Props) {
         </button>
       </div>
 
-      {/* Navigation */}
       <nav className="mt-10 space-y-5">
         {menuItems.map(({ label, href, highlight }) => (
           <a
@@ -51,9 +49,7 @@ export default function MobileMenu({ onClose, isOpen }: Props) {
         ))}
       </nav>
 
-      {/* Footer social */}
       <div className="flex justify-end mt-auto pt-10 text-xs uppercase tracking-widest space-y-3">
-        {/* <p className="text-neutral-500 dark:text-neutral-400">Ver</p> */}
         <div className="flex flex-col gap-4 text-lg mb-8 mr-4">
           {socialLinks.map(({ label, href }) => (
             <a

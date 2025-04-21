@@ -29,7 +29,6 @@ export default function Navbar() {
               secondaryColor="text-neutral-700 dark:text-neutral-300"
             />
           </Link>
-
           <div className="hidden text-neutral-900 dark:text-white md:flex items-center gap-6">
             <Link href="/contact" className={linkBaseStyle}>
               <span className="text-md">CONTACTO</span>

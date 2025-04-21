@@ -17,26 +17,21 @@ export default function HeroContent() {
       <h1 className="text-[clamp(1.5rem,6vw,1.8rem)] font-bold text-neutral-900 dark:text-white leading-tight">
         Hola, soy Samuel Hiram
       </h1>
-
       <p className="text-neutral-700 dark:text-neutral-300 text-[clamp(0.9rem,3vw,1.05rem)] leading-relaxed max-w-[65ch]">
         Soy desarrollador web con enfoque full-stack. Me interesa crear software
         útil, bien estructurado y pensado para crecer con el tiempo.
       </p>
-
+      <p className="text-neutral-700 dark:text-neutral-200 text-[clamp(0.85rem,2.8vw,1rem)] max-w-[65ch]">
+        Más allá del código, me gusta colaborar, escuchar a quienes usan lo que
+        hacemos, y buscar siempre soluciones simples a problemas complejos.
+      </p>
       {showMore && (
         <>
-          <p className="text-neutral-400 dark:text-neutral-200 text-[clamp(0.85rem,2.8vw,1rem)] max-w-[65ch]">
-            Más allá del código, me gusta colaborar, escuchar a quienes usan lo
-            que hacemos, y buscar siempre soluciones simples a problemas
-            complejos.
-          </p>
-
-          <p className="text-neutral-400 dark:text-neutral-200 text-[clamp(0.85rem,2.8vw,1rem)] max-w-[65ch]">
+          <p className="text-neutral-700 dark:text-neutral-200 text-[clamp(0.85rem,2.8vw,1rem)] max-w-[65ch]">
             Trabajo principalmente con estas tecnologías para lograr soluciones
             escalables, bien organizadas y enfocadas en el rendimiento.
           </p>
-
-          <div className="border w-fit rounded-lg border-neutral-300 dark:border-neutral-700 p-2 bg-neutral-50 dark:bg-neutral-800 space-y-3">
+          <div className="backdrop-blur-2xl bg-neutral-200/60 dark:bg-neutral-800/60 shadow-xl border w-fit rounded-lg border border-neutral-300 dark:border-neutral-700 p-2 space-y-3">
             <div className="flex flex-wrap gap-4 text-2xl text-neutral-600 dark:text-neutral-300">
               <Icon icon="devicon:nextjs" />
               <Icon icon="devicon:react" />
@@ -51,7 +46,6 @@ export default function HeroContent() {
           </div>
         </>
       )}
-
       <div className="w-full flex justify-start">
         <button
           onClick={() => setShowMore(!showMore)}
@@ -60,12 +54,10 @@ export default function HeroContent() {
           {showMore ? "Ocultar detalles" : "Ver más"}
         </button>
       </div>
-
       <div className="flex flex-col xs:flex-row justify-between items-stretch xs:items-center gap-6 mt-2">
         <div className="w-full xs:w-auto flex justify-start">
           <SocialIcons />
         </div>
-
         <div className="w-full xs:w-auto flex flex-wrap justify-end gap-3">
           {buttons.map(({ label, icon }) => (
             <HeroButton key={label} label={label} icon={icon} />

@@ -1,7 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import { Icon } from "@iconify/react";
 import BackgroundMesh from "./BackgroundMesh";
 import HeroCard from "./HeroSectionComponents/HeroCard";
 export default function HeroSection() {
