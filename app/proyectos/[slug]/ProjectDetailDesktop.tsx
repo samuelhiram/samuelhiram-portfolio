@@ -7,9 +7,9 @@ import { Project } from "@/app/utils";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef } from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Icon } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-
+import NameTitle from "@/app/components/NameTitle";
 const STORAGE_KEY = "xima:lastProjectSlide";
 
 export default function ProjectDetailDesktop({
@@ -84,6 +84,7 @@ export default function ProjectDetailDesktop({
             ref={infoRef}
             className="flex flex-col justify-center px-8 text-estudio-black text-lg uppercase gap-6"
           >
+            <NameTitle />
             {["PROYECTO", "AÑO", "LUGAR", "CATEGORÍA"].map((label, i) => {
               const value =
                 label === "PROYECTO"
