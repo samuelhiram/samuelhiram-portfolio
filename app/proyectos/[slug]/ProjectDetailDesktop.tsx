@@ -71,14 +71,14 @@ export default function ProjectDetailDesktop({
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" },
+      transition: { delay: i * 0.0, duration: 0.0, ease: "easeOut" },
     }),
   };
 
   return (
     <>
       {/* <Navbar /> */}
-      <div className="h-dvh flex flex-col  backdrop-blur-3xl bg-neutral-100/40 dark:bg-neutral-900/10 text-neutral-900 dark:text-neutral-100 overflow-hidden">
+      <div className="h-dvh flex flex-col backdrop-blur-3xl bg-neutral-100/40 dark:bg-neutral-900/10 text-neutral-900 dark:text-neutral-100 overflow-hidden">
         <div className="flex-1 grid grid-cols-[400px_1fr] ">
           <div
             ref={infoRef}
