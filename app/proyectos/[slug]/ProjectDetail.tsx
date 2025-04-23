@@ -46,19 +46,19 @@ export default function ProjectDetail({ project }: { project: Project }) {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="pt-16 min-h-dvh bg-neutral-100 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 flex flex-col"
+        className="pt-19 bg-estudio-gray h-dvh flex flex-col"
       >
         {/* Project info */}
         <div
           ref={infoRef}
-          className="text-sm px-6 py-4 sm:px-8 sm:py-6 border-b border-neutral-200 dark:border-neutral-800"
+          className="text-sm uppercase text-estudio-black px-8 py-4 shrink-0"
         >
-          <div className="flex justify-between flex-wrap gap-y-4 text-sm">
+          <div className="flex justify-between">
             {[
               { label: "PROYECTO", value: project.projectName },
               { label: "AÑO", value: project.year },
@@ -70,14 +70,12 @@ export default function ProjectDetail({ project }: { project: Project }) {
                 animate={isInView ? "visible" : "hidden"}
                 variants={infoVariants}
               >
-                <p className="text-[11px] uppercase text-neutral-500 dark:text-neutral-400 font-light">
-                  {item.label}
-                </p>
-                <p className="font-medium">{item.value}</p>
+                <p className="text-[10px] font-light ">{item.label}</p>
+                <p className="font-semibold">{item.value}</p>
               </motion.div>
             ))}
           </div>
-          <div className="flex justify-between flex-wrap gap-y-4 mt-4 text-sm">
+          <div className="flex justify-between mt-2">
             {[
               { label: "LUGAR", value: project.location },
               { label: "CATEGORÍA", value: project.category },
@@ -89,19 +87,17 @@ export default function ProjectDetail({ project }: { project: Project }) {
                 animate={isInView ? "visible" : "hidden"}
                 variants={infoVariants}
               >
-                <p className="text-[11px] uppercase text-neutral-500 dark:text-neutral-400 font-light">
-                  {item.label}
-                </p>
-                <p className="font-medium">{item.value}</p>
+                <p className="text-[10px] font-light ">{item.label}</p>
+                <p className="font-semibold">{item.value}</p>
               </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Carousel */}
+        {/* Images */}
         <motion.section
           ref={carouselRef}
-          initial={{ opacity: 0.8, scale: 0.98 }}
+          initial={{ opacity: 0.8, scale: 0.95 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative flex-1 overflow-hidden"
@@ -123,7 +119,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
               ))}
             </div>
           </div>
-          <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+          <div className="flex absolute bottom-4 left-0 right-0 justify-center gap-2 z-10">
             {scrollSnaps.map((_, index) => (
               <DotButton
                 key={index}
@@ -134,8 +130,8 @@ export default function ProjectDetail({ project }: { project: Project }) {
           </div>
         </motion.section>
 
-        {/* Carousel selector */}
-        <div className="shrink-0 border-t border-neutral-200 dark:border-neutral-800">
+        {/* Top horizontal selector */}
+        <div className="shrink-0">
           <ProjectSelectorCarousel />
         </div>
       </motion.div>

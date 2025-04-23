@@ -1,6 +1,5 @@
 // ProjectDetailDesktop.tsx
 "use client";
-
 import Navbar from "@/app/components/Navbar";
 import ProjectSelectorCarousel from "@/app/components/ProjectSelectorCarousel";
 import { Project } from "@/app/utils";
@@ -10,6 +9,7 @@ import { useCallback, useEffect, useMemo, useRef } from "react";
 import { ChevronRight, Icon } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import NameTitle from "@/app/components/NameTitle";
+import Link from "next/link";
 const STORAGE_KEY = "xima:lastProjectSlide";
 
 export default function ProjectDetailDesktop({
@@ -84,7 +84,9 @@ export default function ProjectDetailDesktop({
             ref={infoRef}
             className="flex flex-col justify-center px-8 text-estudio-black text-lg uppercase gap-6"
           >
-            <NameTitle />
+            <Link href="/" className="flex items-center gap-2">
+              <NameTitle />
+            </Link>
             {["PROYECTO", "AÑO", "LUGAR", "CATEGORÍA"].map((label, i) => {
               const value =
                 label === "PROYECTO"

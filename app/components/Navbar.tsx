@@ -42,8 +42,8 @@ export default function Navbar() {
             <Icon
               icon="gg:menu-left"
               className="text-neutral-900 dark:text-white"
-              width="24"
-              height="24"
+              width="32"
+              height="32"
             />
           </button>
         </div>

@@ -5,8 +5,20 @@ import { Icon } from "@iconify/react";
 import SocialIcons from "./SocialLinks";
 
 const buttons = [
-  { label: "Curriculum", icon: "mdi:medal" },
-  { label: "Proyectos", icon: "maki:arrow" },
+  {
+    label: "Curriculum",
+    icon: "mdi:medal",
+    onClick: () => {
+      console.log("curriculum");
+    },
+  },
+  {
+    label: "Proyectos",
+    icon: "maki:arrow",
+    onClick: () => {
+      window.open("/proyectos/modern-loft", "_self");
+    },
+  },
 ];
 
 export default function HeroContent() {
@@ -59,8 +71,13 @@ export default function HeroContent() {
           <SocialIcons />
         </div>
         <div className="w-full xs:w-auto flex flex-wrap justify-end gap-3">
-          {buttons.map(({ label, icon }) => (
-            <HeroButton key={label} label={label} icon={icon} />
+          {buttons.map(({ label, icon, onClick }) => (
+            <HeroButton
+              key={label}
+              label={label}
+              icon={icon}
+              onClick={onClick}
+            />
           ))}
         </div>
       </div>
@@ -68,9 +85,20 @@ export default function HeroContent() {
   );
 }
 
-function HeroButton({ label, icon }: { label: string; icon: string }) {
+function HeroButton({
+  label,
+  icon,
+  onClick,
+}: {
+  label: string;
+  icon: string;
+  onClick: () => void;
+}) {
   return (
-    <button className="btn text-[clamp(0.75rem,3vw,0.875rem)]">
+    <button
+      onClick={onClick}
+      className="btn text-[clamp(0.75rem,3vw,0.875rem)]"
+    >
       <span>{label}</span>
       <Icon icon={icon} className="w-[1rem] h-[1rem]" />
     </button>
