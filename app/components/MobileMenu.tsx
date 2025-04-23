@@ -26,7 +26,7 @@ export default function MobileMenu({ onClose, isOpen }: Props) {
       <div className="flex justify-end">
         <button
           onClick={onClose}
-          className="cursor-pointer text-6xl font-light text-neutral-600 dark:text-neutral-400 hover:text-red-400 dark:hover:text-red-500 transition"
+          className="cursor-pointer text-4xl font-light text-neutral-600 dark:text-neutral-400 hover:text-red-400 dark:hover:text-red-500 transition"
           aria-label="Cerrar menú"
         >
           ×

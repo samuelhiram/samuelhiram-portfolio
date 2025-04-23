@@ -1,15 +1,15 @@
 // ProjectDetailDesktop.tsx
 "use client";
-
 import Navbar from "@/app/components/Navbar";
 import ProjectSelectorCarousel from "@/app/components/ProjectSelectorCarousel";
 import { Project } from "@/app/utils";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef } from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Icon } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-
+import NameTitle from "@/app/components/NameTitle";
+import Link from "next/link";
 const STORAGE_KEY = "xima:lastProjectSlide";
 
 export default function ProjectDetailDesktop({
@@ -71,19 +71,22 @@ export default function ProjectDetailDesktop({
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" },
+      transition: { delay: i * 0.0, duration: 0.0, ease: "easeOut" },
     }),
   };
 
   return (
     <>
       {/* <Navbar /> */}
-      <div className="h-dvh flex flex-col  backdrop-blur-3xl bg-neutral-100/40 dark:bg-neutral-900/10 text-neutral-900 dark:text-neutral-100 overflow-hidden">
+      <div className="h-dvh flex flex-col backdrop-blur-3xl bg-neutral-100/40 dark:bg-neutral-900/10 text-neutral-900 dark:text-neutral-100 overflow-hidden">
         <div className="flex-1 grid grid-cols-[400px_1fr] ">
           <div
             ref={infoRef}
             className="flex flex-col justify-center px-8 text-estudio-black text-lg uppercase gap-6"
           >
+            <Link href="/" className="flex items-center gap-2">
+              <NameTitle />
+            </Link>
             {["PROYECTO", "AÑO", "LUGAR", "CATEGORÍA"].map((label, i) => {
               const value =
                 label === "PROYECTO"
