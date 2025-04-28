@@ -31,8 +31,11 @@ export default function HeroContent() {
       </h1>
       <p className="text-neutral-700 dark:text-neutral-300 text-[clamp(0.9rem,3vw,1.05rem)] leading-relaxed max-w-[65ch]">
         Soy desarrollador web con enfoque full-stack. Me interesa crear software
-        útil, bien estructurado y pensado para crecer con el tiempo.
+        útil, bien estructurado y pensado para crecer con el tiempo. 
       </p>
+      <span 
+        className="w-full text-end cursor-pointer text-sm font-medium text-orange-600 dark:text-orange-400 hover:underline"
+        >Ver mi stack</span>
       <p className="text-neutral-700 dark:text-neutral-200 text-[clamp(0.85rem,2.8vw,1rem)] max-w-[65ch]">
         Más allá del código, me gusta colaborar, escuchar a quienes usan lo que
         hacemos, y buscar siempre soluciones simples a problemas complejos.
